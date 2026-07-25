@@ -1,8 +1,25 @@
 aid: concerto
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/concerto.png
 name: Concerto
-description: 'Concerto is a company surfaced as a portfolio company of matrix-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Concerto is a consumer fintech in the credit-card space, surfaced as a Matrix Partners
+  portfolio company and tracked in the API Evangelist network. It operates a co-branded / consumer
+  card program: cardholders are served through an account portal at app.concertocard.com that redirects
+  to a Servicing Solutions cardholder-servicing platform (cardservices.servicingsolutions.com). The
+  concertocard.com apex is used for corporate email (Microsoft 365) and domain verification (Atlassian,
+  Facebook, GlobalSign) but does not currently serve a public marketing site, and an enrichment probe
+  of July 2026 found no public developer portal, API documentation, OpenAPI, SDK, or other machine
+  API surface. This profile therefore carries identity and domain-security signals only.'
 url: https://raw.githubusercontent.com/api-evangelist/concerto/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +29,14 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Fintech
+- Credit Cards
+- Payments
+- Cards
+- Financial Services
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +44,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/concerto-domain-security.yml
 - type: Website
   url: https://concertocard.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
